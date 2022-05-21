@@ -16,6 +16,16 @@ function setTime(){
     secHand.style.transform = `rotate(${secondDeg}deg)`;
     minHand.style.transform = `rotate(${minuteDeg}deg)`;
     hourHand.style.transform = `rotate(${hourDeg}deg)`;
+    if(secondDeg === 90){
+        secHand.style.transition = 'all 0s';
+    }else{
+        secHand.style.transition = 'all .05s';
+    }
+    if(minuteDeg === 90){
+        minHand.style.transition = 'all 0s';
+    }else{
+        minHand.style.transition = 'all .1s';
+    }
 }
 
 setTime();
