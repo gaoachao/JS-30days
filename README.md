@@ -1,6 +1,7 @@
 # JavaScript30 - 一个月纯 JS 挑战
 
 > Repo by: [bitter-gourd](https://github.com/gaoachao)
+>
 > [JavaScript30](https://javascript30.com/) 教程作者：[Wes Bos](https://github.com/wesbos) 
 
 ## 为什么要参加这个挑战？
