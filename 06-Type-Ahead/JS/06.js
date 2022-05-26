@@ -21,6 +21,8 @@ function displayMatches(){
     const regex = new RegExp(this.value,'gi');
     const html = matcher.map(poet => {
         const text = poet.detail_text.replace(regex,`<span class="hl">${this.value}</span>`);
+        //此处的this.value指input里面的内容  this指调用的“search”DOM对象
+        //作用是让关键词在文本中被选中
         const title = poet.title.replace(regex,`<span class="hl">${this.value}</span>`);
         return`
             <li>
@@ -29,14 +31,17 @@ function displayMatches(){
             </li>
         `;
     }).join('');
+    //Array.join()方法是让数组对象拼接成一个字符串''内的是相邻两个数组元素之间的内容。
     suggestions.innerHTML = html;
 }
+
 function deleteContent(){
     const html = '<li>输入诗句，找一首诗</li>'
     if(!this.value){
         suggestions.innerHTML = html;
     }
 }
+
 
 search.addEventListener('change',displayMatches);
 search.addEventListener('keyup',displayMatches);
